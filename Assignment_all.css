@@ -149,3 +149,31 @@ form{
   }
 }
 
+/* for Assignment_2.html file*/
+/*--------------------------------------------------*/
+.as2{
+  text-align: center;
+}
+.as2>a{
+  height: 2em;
+  width: 30%;
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.5em;
+  margin: 4px 2px;
+  background-color: #01041d;
+  box-shadow:  rgb(7, 12, 15) 3px 3px 3px;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(242, 242, 255);
+  font-size: 2em;
+  text-shadow: rgb(38, 39, 34) 0px 1px 1px  ;
+}
+
+
+
+/*--------------------------------------------------*/
+
+
