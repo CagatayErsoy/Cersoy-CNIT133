@@ -27,7 +27,7 @@ footer{
 }
 form{
   text-align: center;
-  margin-left: 1em;
+ 
   
 }
 .back_button{
@@ -153,23 +153,38 @@ form{
 /*--------------------------------------------------*/
 .as2{
   text-align: center;
+  display: grid;
+  justify-items: center;
+  grid-row: 33%;
+  
 }
-.as2>a{
+.as2>div{
   height: 2em;
-  width: 30%;
+  width: 26%;
   border-radius: 20px;
   padding: 10px 20px;
   text-align: center;
   display: inline-block;
   font-size: 1.5em;
-  margin: 4px 2px;
+  margin: 10px 2px;
   background-color: #01041d;
-  box-shadow:  rgb(7, 12, 15) 3px 3px 3px;
+  
+  border: solid  rgb(33, 47, 54) 3px;
   cursor: pointer;
+}
+.as2>div>a{
   text-decoration: none;
   color: rgb(242, 242, 255);
-  font-size: 2em;
   text-shadow: rgb(38, 39, 34) 0px 1px 1px  ;
+  font-size: 1.4em;
+  
+}
+.as2>div:hover{
+  background-color: cadetblue;
+  transition: 0.4s;
+  border: none;
+  color: #01041d;
+  
 }
 
 
