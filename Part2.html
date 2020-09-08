@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Cersoy-CNIT133-Assignments-2-Part2">
+<link href="Assignment_all.css" type="text/css" rel="stylesheet">
+<title>Cersoy-CNIT133-Assignments_2_Part2</title>
+<script src="Part2.js"></script>
+<style>
+    .main{
+        display: block;
+        border: solid 3px grey;
+        text-align: center;
+        margin-bottom: 2em;
+        margin-top: 2em;
+        font-size: 1.3em;
+        background-color: rgb(52, 54, 59);
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+</style>
+</head>
+<body>
+    <script src="Part2.js"></script>
+    <header>
+        Cersoy-CNIT133-Assignments 2 -Part2
+    </header>
+    <div class="main">
+            <div>
+                <p>First Number</p> 
+                <input type="text" name="first_number" id="first_num" required>
+            </div>
+            <div>
+               <p> Second Number</p>
+                <input type="text" name="second_number" id="second_num" required>
+            </div>
+            <div>
+                <p>Third number</p>
+                <input type="text" name="third_number" id="third_num" required>
+            </div>
+            
+                <button class="Calculate" onclick="calculate()" >Calculate </button>
+            
+            <div>
+               <p> Results</p>
+                <textarea name="results" id="results" cols="30" rows="10"></textarea>
+            </div>
+           
+            <form action="">
+                <button class="reset" onclick="res() "> reset </button>
+            </form>
+            <form action="">
+                <button class="Fade_results" > Click to Fade Results </button>
+            </form>
+        
+    </div>
+    
+    <form action="Assignment_2.html">
+        <button class="back_button" >Return to Assignments 2 </button>
+    </form>
+        
+    
+   <footer>
+       This Webpage designed by Cagatay Ersoy 
+   </footer>
+    
+</body>
+
+</html>
