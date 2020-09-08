@@ -6,6 +6,16 @@
 <link href="Assignment_all.css" type="text/css" rel="stylesheet">
 <title>Cersoy-CNIT133-Assignments_2_Part2</title>
 <script src="Part2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+   
+   $(document).ready(function(){
+    $("#fade").click(function(){
+    $("#results").fadeTo("slow", 0.15 );
+    alert("here")
+  });
+   });
+  </script>
 <style>
     .main{
         display: block;
@@ -45,14 +55,14 @@
             
             <div>
                <p> Results</p>
-                <textarea name="results" id="results" cols="30" rows="10"></textarea>
+                <textarea name="results" id="results" cols="30" rows="10" readonly></textarea>
             </div>
            
             <form action="">
                 <button class="reset" onclick="res() "> reset </button>
             </form>
             <form action="">
-                <button class="Fade_results" > Click to Fade Results </button>
+                <button class="Fade_results" id="fade" > Click to Fade Results </button>
             </form>
         
     </div>
