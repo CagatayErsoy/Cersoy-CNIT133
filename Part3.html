@@ -5,25 +5,62 @@
 <meta name="description" content="Cersoy-CNIT133-Assignments-2-Part3">
 <link href="Assignment_all.css" type="text/css" rel="stylesheet">
 <title>Cersoy-CNIT133-Assignments_2_Part3</title>
+<script src="Part3.js"></script>
+
 <style>
     .main{
+        display: block;
+        border: solid 3px grey;
         text-align: center;
-        margin-bottom: 7em;
-        margin-top: 8em;
+        margin-bottom: 2em;
+        margin-top: 2em;
+        font-size: 1.3em;
+        background-color: rgb(52, 54, 59);
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
     }
+
 </style>
 </head>
 <body>
+    <script src="Part3.js"></script>
     <header>
-        Cersoy-CNIT133-Assignments 2 -Part3
+        Cersoy-CNIT133-Assignments 2 -Part2
     </header>
     <div class="main">
-        <script>
-    
+            <div>
+                First Number
+                <input type="text" name="first_number" id="first_num" required>
+            </div>
+            <div>
+               Second Number
+                <input type="text" name="second_number" id="second_num" required>
+            </div>
+            <div>
+               Third Number
+                <input type="text" name="third_number" id="third_num" required>
+            </div>
+            <div>
+                Fourth Number
+                 <input type="text" name="forth_number" id="forth_num" required>
+             </div>
+             <div>
+                Fifth Number
+                 <input type="text" name="fifth_number" id="fifth_num" required>
+             </div>
             
-        
-        </script> 
-        
+              
+               <p> Results</p>
+                <textarea name="results" id="results" cols="30" rows="10" readonly></textarea>
+            </div>
+           
+            <form action="">
+                <button class="reset" onclick="res() "> reset </button>
+            </form>
+            
+                <input type="button" class="Fade_results" id="fade" value="Click to Fade Results " > 
+            
         
     </div>
     
