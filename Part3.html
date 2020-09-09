@@ -10,15 +10,17 @@
 <style>
     .main{
         display: block;
-        border: solid 3px grey;
+        border: solid 3px rgb(116, 116, 116);
         text-align: center;
         margin-bottom: 2em;
         margin-top: 2em;
         font-size: 1.3em;
-        background-color: rgb(52, 54, 59);
+        background-color: rgb(56, 68, 100);
         width: 40%;
         margin-left: auto;
         margin-right: auto;
+        color: honeydew;
+        
     }
 
 </style>
@@ -29,7 +31,9 @@
         Cersoy-CNIT133-Assignments 2 -Part2
     </header>
     <div class="main">
-            <div>
+        <p> <h2>Please enter 5 number</h2>
+        </p>    
+        <div>
                 First Number
                 <input type="text" name="first_number" id="first_num" required>
             </div>
@@ -50,16 +54,15 @@
                  <input type="text" name="fifth_number" id="fifth_num" required>
              </div>
             
-              
+             <input type="button" class="Calculate" id="Calculate" value="Calculate "onclick="calculate()" >
                <p> Results</p>
                 <textarea name="results" id="results" cols="30" rows="10" readonly></textarea>
-            </div>
+            
            
             <form action="">
                 <button class="reset" onclick="res() "> reset </button>
             </form>
-            
-                <input type="button" class="Fade_results" id="fade" value="Click to Fade Results " > 
+                
             
         
     </div>
