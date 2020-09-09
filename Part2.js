@@ -6,7 +6,7 @@ function calculate(){
     numb3=document.getElementById("third_num").value
     
     if(isNaN(numb1)||isNaN(numb2)||isNaN(numb3)) {
-        document.getElementById("results").value=("You did't enter a number for at least one number,Please enter a number fot empty number/numbers")
+        document.getElementById("results").value=("You did't enter a number for at least one textbox \nPlease enter a number fot empty textbox/textboxes")
     }
     else {
         document.getElementById("results").value=null;

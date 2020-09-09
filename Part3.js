@@ -8,7 +8,7 @@ function calculate(){
     numb5=document.getElementById("fifth_num").value
     
     if(isNaN(numb1)||isNaN(numb2)||isNaN(numb3)||isNaN(numb4)||isNaN(numb5)) {
-        document.getElementById("results").value=("You did't enter a number for at least one number,Please enter a number fot empty number/numbers")
+        document.getElementById("results").value=("You did't enter a number for at least one textbox \nPlease enter a number for empty textbox/textboxes")
     }
     else {
         
@@ -55,7 +55,7 @@ function calculate(){
             negative++;
            
         //displaying results//
-        document.getElementById("results").value=("you enter \n"+positive+" positive number \n"+negative+" negative number \n"+zero+" zero \n click to reset button for doing again");
+        document.getElementById("results").value=("you entered \n"+positive+" positive number \n"+negative+" negative number \n"+zero+" zero \nclick to reset button for doing again");
         
     }
 

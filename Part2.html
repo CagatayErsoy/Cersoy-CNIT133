@@ -29,8 +29,27 @@
         margin-left: auto;
         margin-right: auto;
         color: honeydew;
+        
     }
+    label{
+        display: inline-block;
+        width: 180px;
+        text-align: left;
+        margin-left: 1em;
 
+    }
+    .buttons{
+        width: auto;
+        height: 2e;
+        background-color: rgb(28, 79, 138);
+        color: burlywood;
+        font-size: 1em;
+        
+        margin: 1em;
+        padding: 5px;
+
+    }
+    
 </style>
 </head>
 <body>
@@ -39,31 +58,38 @@
         Cersoy-CNIT133-Assignments 2 -Part2
     </header>
     <div class="main">
-            <div>
-                <p>First Number</p> 
-                <input type="text" name="first_number" id="first_num" required>
+            
+        <div>
+            <h2>Please enter three number for calculations</h2>
+        </div>
+        <div>
+                <label for="text">First Number</label>
+                
+                <input type="text" class="numbers" name="first_number" id="first_num" required>
             </div>
             <div>
-               <p> Second Number</p>
-                <input type="text" name="second_number" id="second_num" required>
+                <label for="text">Second Number</label>
+               
+                <input type="text" class="numbers" name="second_number" id="second_num" required>
             </div>
             <div>
-                <p>Third number</p>
-                <input type="text" name="third_number" id="third_num" required>
+                <label for="text"> Third number</label>
+               
+                <input type="text" class="numbers" name="third_number" id="third_num" required>
             </div>
             
-                <button class="Calculate" onclick="calculate()" >Calculate </button>
+                <button class="buttons" id="calculate"onclick="calculate()" >Calculate </button>
             
             <div>
                <p> Results</p>
                 <textarea name="results" id="results" cols="30" rows="10" readonly></textarea>
             </div>
            
-            <form action="">
-                <button class="reset" onclick="res() "> reset </button>
-            </form>
             
-                <input type="button" class="Fade_results" id="fade" value="Click to Fade Results " > 
+                <input type="button" class="buttons" onclick="res() " value="Reset"> </input>
+            
+            
+                <input type="button" class="buttons" id="fade" value="Click to Fade Results " > 
             
         
     </div>

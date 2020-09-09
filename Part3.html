@@ -22,47 +22,68 @@
         color: honeydew;
         
     }
+    label{
+        display: inline-block;
+        width: 180px;
+        text-align: left;
+        margin-left: 1em;
+
+    }
+    .numbers{
+        margin: 1px;
+    }
+    .buttons{
+        width: auto;
+        height: 2e;
+        background-color: rgb(28, 79, 138);
+        color: burlywood;
+        font-size: 1em;
+        
+        margin: 1em;
+        padding: 5px;
+
+    }
 
 </style>
 </head>
 <body>
     <script src="Part3.js"></script>
     <header>
-        Cersoy-CNIT133-Assignments 2 -Part2
+        Cersoy-CNIT133-Assignments 2 -Part3
     </header>
     <div class="main">
-        <p> <h2>Please enter 5 number</h2>
+        <p> <h2>Please enter five number </h2>
         </p>    
         <div>
-                First Number
+                <label for="text">First Number</label>
                 <input type="text" name="first_number" id="first_num" required>
             </div>
             <div>
-               Second Number
+                <label for="text">Second Number</label>
                 <input type="text" name="second_number" id="second_num" required>
             </div>
             <div>
-               Third Number
+                <label for="text"> Third number</label>
                 <input type="text" name="third_number" id="third_num" required>
             </div>
             <div>
-                Fourth Number
+                <label for="text"> Fourth Number</label>
+                
                  <input type="text" name="forth_number" id="forth_num" required>
              </div>
              <div>
-                Fifth Number
+                <label for="text"> Fifth Number</label>
+                
                  <input type="text" name="fifth_number" id="fifth_num" required>
              </div>
             
-             <input type="button" class="Calculate" id="Calculate" value="Calculate "onclick="calculate()" >
+             <input type="button" class="buttons" id="Calculate" value="Calculate "onclick="calculate()" >
                <p> Results</p>
                 <textarea name="results" id="results" cols="30" rows="10" readonly></textarea>
             
-           
-            <form action="">
-                <button class="reset" onclick="res() "> reset </button>
-            </form>
-                
+           <div>
+                <input type="button" class="buttons" onclick="res() " value="Reset"> </input>
+            </div>
             
         
     </div>

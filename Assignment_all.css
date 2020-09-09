@@ -32,11 +32,12 @@ form{
 }
 .back_button{
   height: 2em;
-  width: 35%;
+  width: auto;
   border-radius: 20px;
   padding: 10px 20px;
   text-align: center;
   display: inline-block;
+  
   font-size: 1.5em;
   margin: 4px 2px;
   background-color: #01041d;
