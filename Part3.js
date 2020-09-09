@@ -17,7 +17,7 @@ function calculate(){
         n3=parseInt(numb3);
         n4=parseInt(numb4);
         n5=parseInt(numb5);
-        alert(positive);
+        
         // number 1//
         if(n1>0)
             positive++;
