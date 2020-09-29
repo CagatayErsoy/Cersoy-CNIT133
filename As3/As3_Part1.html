@@ -6,24 +6,51 @@
 <link href="../Assignment_all.css" type="text/css" rel="stylesheet">
 <style>
     #main{
-        background-color: rgb(141, 92, 74);
-        
-        
+        background-color: rgb(141, 92, 74);  
         margin: auto 20em;
         color: blanchedalmond;
         border: solid 3px black;
         border-radius: 20px;
+        overflow: auto;
+        height: auto;
+        padding: 30px;
 
     }
     #Message{
         width: 20em;
-        height: 10em;
-        
+        height: 10em; 
         overflow: auto;
     }
     #header{
         font-size: 2em;
         
+    }
+    .inp{
+        margin-right: 8em;
+        float: right;
+        
+        
+        
+    }
+    .names{
+        float: left;
+        margin-left:6em ;
+        
+        
+    }
+    #Cal_Button, #restart{
+        height: 2em;
+        width: 5em;
+        background-color: rgb(112, 107, 67);
+        color: rgb(142, 206, 163);
+        border:  rgb(142, 206, 156) solid 1px;
+        font-size: 1.5em;
+        font-family: cursive;
+        border-radius: 6px;
+        margin: 10px;
+    }
+    #Cal_Button:hover, #restart:hover{
+        background-color: darkgray;
     }
 </style>
 <script src="Part1.js"></script>
@@ -38,22 +65,21 @@
         <form name="dataForm" id="dataForm">
             <label for="header" id="header"> Student Grade Calculator</label><br>
             
-            <label for="Homework_Average"> Homework Average</label>
-            <input type="text"  id="Homework_Average" width="20px" required="yes"><br>
-            
-            <label for="Mid-term_Exam"> Mid-term Exam</label>
-            <input type="text"  id="Mid-term_Exam" width="20px" required="yes"><br>
-            <label for="Final_Exam"> Final Exam</label>
-            <input type="text"  id="Final_Exam" width="20px" required="yes"><br>
-            <label for="Participation"> Participation</label>
-            <input type="text"  id="Participation" width="20px" required="yes"><br>
+            <label for="Homework_Average" class="names"> Homework Average</label>
+            <input type="text" class="inp"   id="Homework_Average" width="20px" required="yes"><br>
+            <label for="Mid-term_Exam" class="names"> Mid-term Exam</label>
+            <input type="text" class="inp" id="Mid-term_Exam" width="20px" required="yes"><br>
+            <label for="Final_Exam" class="names"> Final Exam</label>
+            <input type="text"  class="inp"  id="Final_Exam" width="20px" required="yes"><br>
+            <label for="Participation"class="names"> Participation</label>
+            <input type="text" class="inp"  id="Participation" width="20px" required="yes"><br>
             <input type="button" id="Cal_Button" onclick="total()" value="Calculate" ></input><br>
-            <label for="Final_Average"> Final Average</label>
-            <input type="text"  id="Final_Average" width="20px" readonly><br>
-            <label for="Final_note"> Final_Note</label>
-            <input type="text" id="Final_note" width="20px" readonly><br>
-            <label for="Message"> Comment Area </label>
-            <input type="text"  id="Message"   readonly ><br>
+            <label for="Final_Average"class="names"> Final Average</label>
+            <input type="text" class="inp"  id="Final_Average" width="20px" readonly><br>
+            <label for="Final_note"class="names"> Final Note</label>
+            <input type="text"  class="inp"  id="Final_note" width="20px" readonly><br>
+            <label for="Message"> Comment Area </label><br>
+            <input type="text"   id="Message"   readonly ><br>
             <input type="button" id="restart" onclick="res()" value="Reset" ></input>
 
 
