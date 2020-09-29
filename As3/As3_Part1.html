@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="Cersoy-CNIT133-Assignments-3" content="Cersoy-CNIT133-Assignments-3">
+<link href="../Assignment_all.css" type="text/css" rel="stylesheet">
+<style>
+    #main{
+        background-color: rgb(141, 92, 74);
+        
+        
+        margin: auto 20em;
+        color: blanchedalmond;
+        border: solid 3px black;
+        border-radius: 20px;
+
+    }
+    #Message{
+        width: 20em;
+        height: 10em;
+        
+        overflow: auto;
+    }
+    #header{
+        font-size: 2em;
+        
+    }
+</style>
+<script src="Part1.js"></script>
+<title>Assignment3 Part1</title>
+</head>
+<body>
+    
+    <header>
+        Cersoy-CNIT133-Assignments 3
+    </header>
+    <div id="main">
+        <form name="dataForm" id="dataForm">
+            <label for="header" id="header"> Student Grade Calculator</label><br>
+            
+            <label for="Homework_Average"> Homework Average</label>
+            <input type="text"  id="Homework_Average" width="20px" required="yes"><br>
+            
+            <label for="Mid-term_Exam"> Mid-term Exam</label>
+            <input type="text"  id="Mid-term_Exam" width="20px" required="yes"><br>
+            <label for="Final_Exam"> Final Exam</label>
+            <input type="text"  id="Final_Exam" width="20px" required="yes"><br>
+            <label for="Participation"> Participation</label>
+            <input type="text"  id="Participation" width="20px" required="yes"><br>
+            <input type="button" id="Cal_Button" onclick="total()" value="Calculate" ></input><br>
+            <label for="Final_Average"> Final Average</label>
+            <input type="text"  id="Final_Average" width="20px" readonly><br>
+            <label for="Final_note"> Final_Note</label>
+            <input type="text" id="Final_note" width="20px" readonly><br>
+            <label for="Message"> Comment Area </label>
+            <input type="text"  id="Message"   readonly ><br>
+            <input type="button" id="restart" onclick="res()" value="Reset" ></input>
+
+
+            
+
+
+
+
+        </form>
+    </div>
+    
+   <footer>
+       This Webpage designed by Cagatay Ersoy 
+   </footer>
+    
+</body>
+
+</html>

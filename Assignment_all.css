@@ -187,6 +187,43 @@ form{
   color: #01041d;
   
 }
+/* for Assignment_3.html file*/
+/*--------------------------------------------------*/
+.as3{
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  grid-row: 33%;
+  
+}
+.as3>div{
+  height: 2em;
+  width: 26%;
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.5em;
+  margin: 10px 2px;
+  background-color: #01041d;
+  
+  border: solid  rgb(33, 47, 54) 3px;
+  cursor: pointer;
+}
+.as3>div>a{
+  text-decoration: none;
+  color: rgb(242, 242, 255);
+  text-shadow: rgb(38, 39, 34) 0px 1px 1px  ;
+  font-size: 1.4em;
+  
+}
+.as3>div:hover{
+  background-color: cadetblue;
+  transition: 0.4s;
+  border: none;
+  color: #01041d;
+  
+}
 
 
 
