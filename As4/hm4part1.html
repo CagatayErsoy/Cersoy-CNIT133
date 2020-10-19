@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="Cersoy-CNIT133-Assignments-3" content="Cersoy-CNIT133-Assignments-3">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link href="../Assignment_all.css" type="text/css" rel="stylesheet">
+
+
+<!-- Dragble element-->
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#dragelement" ).draggable();
+  } );
+  </script>
+
+<title>Cersoy-CNIT133-Assignments_4-Part1</title>
+<style>
+    #main{
+        background-color: burlywood;
+        margin:  auto;
+        height: 30%;
+        width: 50%;
+        padding: 1em;
+        text-align: center;
+        border-radius: 10px;
+    }
+    #dragelement{
+       font-size: 2em;
+
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        Cersoy-CNIT133-Assignments 4-Part1s
+    </header>
+    <div id="main">
+        <div id="part1a"><h1>Part1a</h1>
+            <div id="numbers1"></div>
+            <div id="result1"></div>
+            <script >
+                var total=0;
+                
+                for(var x=5; x<=21; x+=4){
+                   
+                    document.getElementById("numbers1").innerHTML+=x+"&nbsp&nbsp";
+                    
+                    total+=x;
+                }
+                document.getElementById("result1").innerHTML="total for loop result is--->"+total;
+            
+            </script>
+
+        </div>
+        <div id="part1b"><h1>Part1b</h1>
+            <div id="numbers2"></div>
+            <div id="result2"></div>
+            <script >
+                var total=0,x=3;
+                
+                while(x<=21){
+                   
+                    document.getElementById("numbers2").innerHTML+=x+"&nbsp&nbsp";
+                    total+=x;
+                    x+=3
+                }
+                document.getElementById("result2").innerHTML="total while loop result is--->"+total;
+            
+            </script>
+        </div>
+        <div > 
+            <br><br> This bird can fly <br>
+           <i class='fas fa-crow' id="dragelement"></i> 
+        </div>
+
+        
+    </div>
+    
+
+    <form action="hm4.html">
+        <button class="back_button" >Return to Assignment-4 page</button>
+    </form>
+        
+    
+   <footer>
+       This Webpage designed by Cagatay Ersoy 
+   </footer>
+    
+</body>
+
+</html>

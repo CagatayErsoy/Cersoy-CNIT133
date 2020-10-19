@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="Cersoy-CNIT133-Assignments-4-part2" content="Cersoy-CNIT133-Assignments-4part2">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link href="../Assignment_all.css" type="text/css" rel="stylesheet">
+
+
+
+<title>Cersoy-CNIT133-Assignments_4-Part2</title>
+<style>
+    #main{
+        background-color: burlywood;
+        margin:  auto;
+        height: 30%;
+        width: 50%;
+        padding: 1em;
+        text-align: center;
+        border-radius: 10px;
+    }
+    #table{
+        border: solid 1px black;
+    }
+    th{
+        border: solid 1px black;
+    }
+    td{
+        border: solid 1px black;
+    }  
+    }
+</style>
+
+</head>
+<body>
+    
+    <header>
+        Cersoy-CNIT133-Assignments 4-Part2
+    </header>
+    <div id="main">
+       <table id="table1" >
+        <tr>
+            <th>Year</th>
+            <th>Amount of deposit</th>
+            <th>Intrest Rate</th>
+            
+        </tr>
+        <table id="table2" >
+        <tr>
+            <th>Year</th>
+            <th>Amount of deposit</th>
+            <th>Intrest Rate</th>
+        </tr>
+        <table id="table3" >
+        <tr>
+            <th>Year</th>
+            <th>Amount of deposit</th>
+            <th>Intrest Rate</th>
+        </tr>
+</table>
+<script>
+        
+        
+        
+    var rate1=5;rate2=6;rate3=7;
+   
+     function addRow(a,b,c,t) {
+    var table=0;
+    if(t==1){table = document.getElementById("table1");}
+  
+    if(t==2){
+    table = document.getElementById("table2");
+    }
+    else if(t==3){
+    table = document.getElementById("table3");
+    }
+    
+    var row = table.insertRow(-1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    cell1.innerHTML = a;
+    cell2.innerHTML = b;
+    cell3.innerHTML = c;
+    
+     }
+    function calc(rate,tab){
+       var P=1000,A=0,n=0;
+        
+       
+       r=rate.toFixed(2)
+       r=r/100;
+      
+       
+       
+       for(n=0;n<=10;n++){
+       
+        A=(P*(1+r)^n);
+        
+        var fn,o;
+
+        o = {style: "currency", currency: "USD"};
+        fn = A.toLocaleString("en", o); 
+        addRow(n,fn,r,tab);
+        P=A;
+       }
+      
+       
+   
+
+    }
+    document.addEventListener("DOMContentLoaded",calc(rate1,"1") +calc(rate2,"2")+calc(rate3,"3"));
+    
+
+
+
+</script>
+        
+    </div>
+    
+
+    <form action="hm4.html">
+        <button class="back_button" >Return to Assignment-4 page</button>
+    </form>
+        
+    
+   <footer>
+       This Webpage designed by Cagatay Ersoy 
+   </footer>
+    
+</body>
+
+</html>
