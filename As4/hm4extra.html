@@ -20,6 +20,12 @@
         text-align: center;
         border-radius: 10px;
     }
+    #result{
+        margin:10px;
+        padding: 0;
+       line-height:10px;
+       word-spacing: 5.7px;
+    }
     
 </style>
 
@@ -27,28 +33,50 @@
 <body>
     
     <header>
-        Cersoy-CNIT133-Assignments 4-Part2
+        Cersoy-CNIT133-Assignments 4-ExtraCredit
     </header>
     <div id="main">
         <label for="size">Please enter one side of square between 2-10 inclusive</label>
         <input type="number" id="size" name="size_of_side"><br><br>
         
-        <input type="button" id="generate" value="Generate" action><br>
+        <input type="button" id="generate" value="Generate" ><br>
+        <input type="reset" id="Reset" value="Reset" >
         <div id="result"></div>
         
 
 <script>
-        function square(){
-            var number=document.getElementById('size').value;
-            while(number<2 || number>10){
-                document.getElementById("result").innerHTML = 'please enter number between 2-10 inclusive' ;
-                
-            }
+    document.getElementById("generate").onclick=function square(){
+        
+            var num=parseInt(document.getElementById('size').value);
 
+            
+            if(num<2||num>10){
+                
+                document.getElementById("result").innerHTML = "please enter number between 2-10 inclusive" ;
+            }
+            else{
+                document.getElementById("result").innerHTML="";
+               for(let n=1;n<=num;n++){
+                    
+                   for(var m=1;m<=num;m++){
+                       if(m>1 && m<num && n>1 && n<num){
+                        document.getElementById("result").innerHTML = document.getElementById("result").innerHTML+"&nbsp" ;
+                       } 
+                       else{                   
+                        document.getElementById("result").innerHTML = document.getElementById("result").innerHTML+"*" ; 
+                       }
+                   }
+                   document.getElementById("result").innerHTML = document.getElementById("result").innerHTML+"<br>";
+               }
+            }
+            
+            
+                
         }
-        button.addEventListener('click', square);
-        
-        
+        document.getElementById("Reset").onclick=function reset(){
+                document.getElementById("result").innerHTML=""
+                document.getElementById("size").value=""
+        }
     
     
 
