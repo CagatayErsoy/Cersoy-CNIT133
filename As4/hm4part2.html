@@ -12,7 +12,7 @@
 <title>Cersoy-CNIT133-Assignments_4-Part2</title>
 <style>
     #main{
-        background-color: burlywood;
+        background-color: rgb(222, 209, 135);
         margin:  auto;
         height: 30%;
         width: 50%;
@@ -20,16 +20,22 @@
         text-align: center;
         border-radius: 10px;
     }
-    #table{
-        border: solid 1px black;
+    table{
+        margin:  auto;
+        width: 50%;
     }
+   
     th{
         border: solid 1px black;
+        background-color: maroon;
+        color: white;
     }
     td{
         border: solid 1px black;
+        background-color: rgb(201, 255, 4);
+        color: blue;
     }  
-    }
+    
 </style>
 
 </head>
@@ -46,19 +52,22 @@
             <th>Intrest Rate</th>
             
         </tr>
+        </table>
         <table id="table2" >
         <tr>
             <th>Year</th>
             <th>Amount of deposit</th>
             <th>Intrest Rate</th>
         </tr>
+        </table>
         <table id="table3" >
         <tr>
             <th>Year</th>
             <th>Amount of deposit</th>
             <th>Intrest Rate</th>
         </tr>
-</table>
+        </table>
+
 <script>
         
         
@@ -94,13 +103,13 @@
       
        
        
-       for(n=0;n<=10;n++){
-       
-        A=(P*(1+r)^n);
+       for(n=1;n<=10;n++){
+        
+        A=(P*(Math.pow((1+r),n)));
         
         var fn,o;
 
-        o = {style: "currency", currency: "USD"};
+        o = {style: "currency", currency: "USD",minimumFractionDigits: 2,maximumFractionDigits: 2};
         fn = A.toLocaleString("en", o); 
         addRow(n,fn,r,tab);
         P=A;
