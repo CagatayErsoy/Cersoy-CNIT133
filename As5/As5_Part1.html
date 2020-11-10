@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="Cersoy-CNIT133-Assignments-5-Part1" content="Cersoy-CNIT133-Assignments-5-Part1">
+<link href="../Assignment_all.css" type="text/css" rel="stylesheet">
+<script src="As5_Part1.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<title>Cersoy-CNIT133-Assignments_5_Part1</title>
+<style>
+    #main{
+        background-color: cornflowerblue;
+        margin: auto;
+        width: 50%;
+        
+        padding: 20px;
+       
+
+    }
+    
+</style>
+<script>
+    
+
+</script>
+</head>
+<body>
+    <header>
+        Cersoy-CNIT133-Assignments 5 Part1
+    </header>
+    <form id="main" action="As5_Part1_2.html" method="POST" onsubmit="" name="main">
+        <p>For being hacked,Please enter these information and I see some $</p>
+        <label for="name">Your First Name and Last Name:</label><br>
+        <input type="text" id="name" name="name"><br><span id="msg1"></span><br>
+        
+        <p>
+            Do you have good money in your bank acount?
+        </p>
+        <label for="checkbox1">Yess</label>
+        <input type="checkbox" id="checkbox1" name="checkbox[]" ><br><br>
+        <label for="checkbox2">No</label>
+        <input type="checkbox" id="checkbox2" name="checkbox[]"><br><br>
+        <label for="checkbox3">Maybe</label>
+        <input type="checkbox" id="checkbox3" name="checkbox[]" ><br><br>
+        <span id="msg2"></span>
+        <p>
+        where are you living
+        </p>
+        <label for="country1">USA</label>
+        <input type="radio" id="country1" name="country" value="1">
+        <label for="country2">Others</label>
+        <input type="radio" id="country2" name="country" value="2"><br>
+        <span id="msg"></span>
+        <p>What type of email you are using</p>
+        <select name="selection" >
+            
+            <option>Chose One</option>
+            <option value="Gmail">Gmail</option>
+            <option value="hotmail">Hotmail</option>
+            <option value="yahoo">Yahoo</option>
+            <option value="others">others</option>
+            </select>
+        <p>If you finish please send the data to me</p>
+        <input type="button" value="Send it to me" id="submit" onclick="validate()">
+        <p id="message"></p>
+
+
+    </form>
+    <form action="../Assignment_1-home.html">
+        <button class="back_button" >Return to main page </button>
+    </form>
+        
+    
+   <footer>
+       This Webpage designed by Cagatay Ersoy 
+   </footer>
+    
+</body>
+
+</html>
