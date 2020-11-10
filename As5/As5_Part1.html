@@ -14,13 +14,21 @@
         width: 50%;
         
         padding: 20px;
+        
        
 
     }
-    
+    .error{
+        color: crimson;
+        background-color: darkblue;
+        border-radius: 5px;
+        padding: auto;
+        
+    }
+   
 </style>
 <script>
-    
+
 
 </script>
 </head>
@@ -28,46 +36,51 @@
     <header>
         Cersoy-CNIT133-Assignments 5 Part1
     </header>
-    <form id="main" action="As5_Part1_2.html" method="POST" onsubmit="" name="main">
-        <p>For being hacked,Please enter these information and I see some $</p>
-        <label for="name">Your First Name and Last Name:</label><br>
-        <input type="text" id="name" name="name"><br><span id="msg1"></span><br>
+    <form id="main" action="As5_Part1_2.html">
+        
+        <h1>Welcome to quick survey for movies</h1><p></p>
+        <label for="movie_name">Please enter your favorite movie</label><br>
+        <input type="text" id="name" name="MovieName"><br>
+        <span id="msg1" class="error"></span>
+        <br>
         
         <p>
-            Do you have good money in your bank acount?
+           What type of movies do you like
         </p>
-        <label for="checkbox1">Yess</label>
-        <input type="checkbox" id="checkbox1" name="checkbox[]" ><br><br>
-        <label for="checkbox2">No</label>
-        <input type="checkbox" id="checkbox2" name="checkbox[]"><br><br>
-        <label for="checkbox3">Maybe</label>
-        <input type="checkbox" id="checkbox3" name="checkbox[]" ><br><br>
-        <span id="msg2"></span>
+        <label for="checkbox1">Sci-Finction</label>
+        <input type="checkbox" id="checkbox1" name="checkbox" >
+        <label for="checkbox2">Scary</label>
+        <input type="checkbox" id="checkbox2" name="checkbox">
+        <label for="checkbox3">Comedy</label>
+        <input type="checkbox" id="checkbox3" name="checkbox" ><br>
+        <span id="msg2" class="error"></span><br><br>
         <p>
-        where are you living
+        Do you like romantic movies
         </p>
-        <label for="country1">USA</label>
-        <input type="radio" id="country1" name="country" value="1">
-        <label for="country2">Others</label>
-        <input type="radio" id="country2" name="country" value="2"><br>
-        <span id="msg"></span>
+        <label for="Yes">Yes</label>
+        <input type="radio" id="yes" name="Yesno" value="1">
+        <label for="No">No</label>
+        <input type="radio" id="no" name="Yesno" value="2"><br>
+        <span id="msg3" class="error"></span><br>
         <p>What type of email you are using</p>
         <select name="selection" >
             
             <option>Chose One</option>
-            <option value="Gmail">Gmail</option>
+            <option value="Gmail" >Gmail</option>
             <option value="hotmail">Hotmail</option>
             <option value="yahoo">Yahoo</option>
             <option value="others">others</option>
             </select>
-        <p>If you finish please send the data to me</p>
-        <input type="button" value="Send it to me" id="submit" onclick="validate()">
-        <p id="message"></p>
+            <p id="msg4" class="error"></p><br><br>
+        
+        <input type="button" value="Submit" id="submit" onclick="validate()">
+        <input type="reset" value="Reset" onclick="location.reload();">
+        
 
 
     </form>
-    <form action="../Assignment_1-home.html">
-        <button class="back_button" >Return to main page </button>
+    <form action="As5index.html">
+        <button class="back_button" >Return to Assignment 5 Page </button>
     </form>
         
     

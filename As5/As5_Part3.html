@@ -6,10 +6,44 @@
 <link href="../Assignment_all.css" type="text/css" rel="stylesheet">
 <title>Cersoy-CNIT133-Assignments_5-Part3</title>
 <script>
-    function goToPage(myForm) {
-        var myDestination = myForm.destinationList.options[myForm.destinationList.selectedIndex].value;
-        window.open(myDestination);
+    var StateArray = [ ["AL", "AlABAMA", "MONTGOMERY", "4,888,871"],                     
+                ["AZ", "ARIZONA", "PHOENIX", "7,171,646"],  
+                ["CA", "CALIFORNIA", "SACRAMENTO", "39,557,045"],
+                ["CO", "COLORADO", "DENVER", "5,694,564"] ];    
+    
+function Pressed()
+  {   
+    
+    var searchKey = document.forms["StateSearch"].elements["state"].value;  
+    searchKey = searchKey.toUpperCase();     
+    
+    var found = false;
+    for (var row = 0; row < StateArray.length; row++) 
+     {
+     if ((StateArray[row][0] == searchKey) || (StateArray[row][1] == searchKey))
+
+     { 
+        document.getElementById("errorplace").innerHTML="Thanks for your inquiry, here is the information you requested"
+       document.forms["StateSearch"].elements["Statename"].value = StateArray[row][0];
+       document.forms["StateSearch"].elements["StateAbrr"].value = StateArray[row][1];
+       document.forms["StateSearch"].elements["StateCapital"].value = StateArray[row][2]; 
+       document.forms["StateSearch"].elements["Population"].value = StateArray[row][3];   
+       
+       row = StateArray.length;   
+       found = true;
+     }
     }
+
+  if ( found == false ) {
+  document.getElementById("errorplace").innerHTML="Please enter a valid State name or State abrr"
+        document.forms["StateSearch"].elements["Statename"].value = "";
+       document.forms["StateSearch"].elements["StateAbrr"].value = "";
+       document.forms["StateSearch"].elements["StateCapital"].value = ""; 
+       document.forms["StateSearch"].elements["Population"].value = "";   
+       }
+
+  }
+    
     </script>
     <style>
         #main{
@@ -29,13 +63,25 @@
         Cersoy-CNIT133-Assignments 5 Part 3
     </header>
    <div id="main">
-    <form>
-       
-        </form>
+    <form name="StateSearch" >
+        <h2>Please enter the State you want to see information</h2>
+        <h4>Note: We have only information of Arizona,Alabam,California and Colorado</h4>
+        <input type="text" name="State" id="state"> 
+        <input type="button" value="State Info" onclick=Pressed(); ><br><br>
+        <br><span id="errorplace"></span><br><br>
+        <label for="Statename">State name:</label><br>
+        <input type="text" id="Statename" name="Statename" readonly><br><br>
+        <label for="StateAbrr">State abrr:</label><br>
+        <input type="text" id="stateAbrr" name="StateAbrr" readonly><br><br>
+        <label for="StateCapital">State Capital:</label><br>
+        <input type="text" id="stateCapital" name="StateCapital" readonly><br><br>
+        <label for="Population">Population:</label><br>
+        <input type="text" id="population" name="Population" readonly><br><br>
+        <input type="reset" value="Reset" onclick="location.reload();">
     </div>
-
-    <form action="../Assignment_1-home.html">
-        <button class="back_button" >Return to main page </button>
+    </form>
+    <form action="As5index.html">
+        <button class="back_button" >Return to Assignment 5</button>
     </form>
         
     
