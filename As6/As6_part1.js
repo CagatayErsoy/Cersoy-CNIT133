@@ -3,14 +3,14 @@
          function roundNumber()
          {
           var errMsg = "Invalid input";
-          var regexp = /^(\d{0,})+(\.\d{4,})?$/;
+          var regexp = /^(\d{0,})+(\.\d{4,})$/;
           if ( isNaN(document.getElementById("data").value) || (document.getElementById("data").value) == "" )
               {
                document.getElementById("msg").value= errMsg;
 
               }
         else if ( regexp.test(document.getElementById("data").value)!=1){
-            document.getElementById("msg").value= " not 4 digit";
+            document.getElementById("msg").value= " Number doesn't have 4 decimal positions";
         }
             else {
 
@@ -19,15 +19,15 @@
                document.getElementById("msg").value=
                "The entered number: " + num +
                "\n rounded to the nearest integer using math round: " + 
-                  roundToIntegerRound( num ) +
-               "\n rounded to the nearest integer using math floor: " + 
-                  roundToIntegerFloor( num ) +
+                roundToIntegerRound( num ) +
+               "\n rounded to the nearest integer using math floor and math round: " + 
+                  roundToIntegerRoundSquareRoot( num ) +
                "\n rounded to the nearest tenth using toFixed: " + 
                   roundToTenthsTofixed( num ) +
                "\n rounded to the nearest hundredth using math floor: " + 
                   roundToHundredthsFloor( num ) +
                "\n rounded to the nearest hundredth using math round: " + 
-                  roundToHundredthsRound( num );
+                  roundToThousandthRound( num );
                      
                  }
 
@@ -38,9 +38,9 @@
             return( Math.round( data) );
          }
 
-         function roundToIntegerFloor( data )
+         function roundToIntegerRoundSquareRoot( data )
          {
-            return( Math.floor( data + .5 ) );
+            return( Math.round( Math.sqrt(data)) );
          }
 
          function roundToTenthsTofixed( data )
@@ -52,12 +52,13 @@
          {
             return( Math.floor( data * 100 + .5 ) / 100 );
           }
-        function roundToHundredthsRound( data )
+        function roundToThousandthRound( data )
            {
-            return( Math.round( data * 100 ) / 100 );
+            return( Math.round( data * 1000 ) / 1000 );
            }
 
         function res() {    
-                       document.getElementById("msg").innerHTML="";
+                       document.getElementById("msg").value="";
                        document.getElementById("data").focus();
+                       document.getElementById("data").value="";
                        }

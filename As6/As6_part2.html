@@ -4,15 +4,14 @@
 <meta charset="utf-8">
 <meta name="Cersoy-CNIT133-Assignments-6-Part2" content="Cersoy-CNIT133-Assignments-6-Part2">
 <link href="../Assignment_all.css" type="text/css" rel="stylesheet">
-<script src="As6_Part1.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="As6_Part2.js"></script>
+
 <title>Cersoy-CNIT133-Assignments_6_Part 2</title>
 <style>
     #main{
         background-color: cornflowerblue;
         margin: auto;
         width: 50%;
-        
         padding: 20px;
         
        
@@ -20,17 +19,22 @@
     }
       
 </style>
-<script>
-
-
-</script>
 </head>
 <body>
     <header>
         Cersoy CNIT133 Assignments 6 Part 2
     </header>
+    <form id="main">
+    <h1>Please enter a text for making search</h1>
+    <textarea  id="inputArea" cols="60" rows="10"></textarea>
+    <h2>Please enter character for searching</h2>
+    <input type="text" id="charSearch" >
+   <input type="button"  id="searchButton" value="Search" onclick="search()"> <br>
     
-    
+   <h2>Results</h2>
+   <textarea  id="results" cols="20" rows="2" readonly></textarea><br>
+    <input type="button" name="reset" id="reset" onclick="res()" value="Reset">
+    </form>
     <form action="As6_index.html">
         <button class="back_button" >Return to Assignment 6 Page </button>
     </form>

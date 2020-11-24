@@ -4,33 +4,81 @@
 <meta charset="utf-8">
 <meta name="Cersoy-CNIT133-Assignments-6-Part3" content="Cersoy-CNIT133-Assignments-6-Part3">
 <link href="../Assignment_all.css" type="text/css" rel="stylesheet">
-<script src="As6_Part1.js"></script>
+<script src="As6_Part3.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"</script>
+<script src="https://rawgit.com/digitalBush/jquery.maskedinput/1.4.1/dist/jquery.maskedinput.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script>
+    
+$(document).ready(function(){
+	jQuery(function($){
+	   $("#number").mask("(999)999-9999");
+	});
+});
+
+function parseNumber(){
+   
+	if ($("#main").valid()){	
+        
+		var allNumber = $('#number').val();
+		
+        //First separate from ()//
+                var parts = allNumber.split( ')');
+        //destroying '('//
+                var convertNumber=parts[0].substring(1,4);
+                $('#areaCode').val(convertNumber);
+		        var withoutAreacode =parts[1];
+        //Now separete rest//
+                var lastPartSeparation=withoutAreacode.split('-');
+                $('#first3').val(lastPartSeparation[0]);
+                $('#last4').val(lastPartSeparation[1]);
+            
+      
+   } 
+ else {
+		return false;
+      }
+  }
+  
+      
+    </script>
 <title>Cersoy-CNIT133-Assignments_6_Part3</title>
 <style>
     #main{
         background-color: cornflowerblue;
         margin: auto;
         width: 50%;
-        
         padding: 20px;
-        
-       
+              
 
     }
-      
+    input{
+        margin: 10px;
+        
+    }
 </style>
-<script>
 
-
-</script>
 </head>
 <body>
     <header>
         Cersoy CNIT133 Assignments 6 Part 3
     </header>
-    
-    
+    <form id="main">
+        <h2>Enter your phone number</h2>
+        <input type="text" id="number" name="number"  aria-invalid="false" ><br>
+        <input type="button" id="split" value="Split the phone number" onclick="parseNumber()"><br>
+        <label for="areaCode">Areacode of number</label>
+        <input type="text" id="areaCode" name="areaCode"><br>
+        <label for="first3">First 3 digit</label>
+        <input type="text" id="first3" name="first3"><br>
+        <label for="last4">Last 4 digit</label>
+        <input type="text" id="last4" name="last4"><br>
+
+        
+
+    </form>
+   
     <form action="As6_index.html">
         <button class="back_button" >Return to Assignment 6 Page </button>
     </form>
