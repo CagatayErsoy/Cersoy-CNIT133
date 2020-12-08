@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="Cersoy-CNIT133-Assignments-7" content="Cersoy-CNIT133-Assignments-7">
+<link href="../Assignment_all.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+     $('.parts').hide();
+     $('.main h2').toggle(
+            function() {
+               $(this).next('.parts').slideDown();
+               $(this).addClass('close');
+            },
+            function() {
+               $(this).next('.parts').fadeOut();
+               $(this).removeClass('close');
+          }
+        ); // end toggle
+    }); // end ready
+    </script>
+    <style>
+        .main{
+            background-color: cornflowerblue;
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+        
+        }
+        h2{
+         cursor: pointer;   
+        }
+        .parts{
+            background-color: whitesmoke;
+            width: 50%;
+            margin: auto;
+            
+            
+        }
+    </style>
+
+<title>Cersoy CNIT133 Homework 7 Homework 7 - Object Model and Miscellaneous jQuery </title>
+</head>
+<body>
+    <header>
+        Cersoy CNIT133 Homework 7 Homework 7 - Object Model and Miscellaneous jQuery
+    </header>
+    <div class="main">
+        <h2>Part1</h2>
+        <div class="parts"><a href="As7_Part1.html">Link1</a></div>
+        <h2>Part2</h2>
+        <div class="parts"><a href="As7_Part2.html">Link2</a></div>
+        
+        
+    </div>
+    
+
+    <form action="../Assignment_1-home.html">
+        <button class="back_button" >Return to main page </button>
+    </form>
+        
+    
+   <footer>
+       This Webpage designed by Cagatay Ersoy 
+   </footer>
+    
+</body>
+
+</html>
