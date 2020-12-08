@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="Cersoy-CNIT133-Assignments-7-Part1" content="Cersoy-CNIT133-Assignments-7-Part1">
+<link href="../Assignment_all.css" type="text/css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    
+       
+        // Define a document ready handler
+        $(function () {
+            // Attach a click event handler to all the radio buttons in the attribute selection table
+            $("#attributeTable :radio").click(function () {
+                // The "this" variable refers to the radio button that was clicked.
+                // The HTML code defines the name attribute of the radio button as the name of the CSS property
+                // we want to set; the value of the radio button is the value we want to set the CSS property to.
+                // By doing this, the CSS of the sample text can be set easily with the following line of code:
+                $("#simple_text").css($(this).attr("name"), $(this).val());
+            });
+            
+        
+
+            // Attach a click event handler to the checkboxes in the attribute selection table
+            $(":checkbox").change(function () {
+                $("#simple_text").css($(this).attr("name"), this.checked ? $(this).val() : "");
+            });
+
+            
+        });
+ 
+           
+           
+
+
+</script>
+
+<title>Cersoy-CNIT133-Assignments_7_Part 1</title>
+<style>
+    #main{
+        background-color: cornflowerblue;
+        margin: auto;
+        width: 50%;
+        padding: 20px;
+        
+       
+
+    }
+      
+</style>
+</head>
+<body>
+    <header>
+        Cersoy CNIT133 Assignments 7 Part 1
+    </header>
+    <form id="main">
+
+       <table id="choose">
+        <tbody>
+        <tr>
+        <th>Background color</th>
+        <th>Font Size</th>
+        <th>Letters and Words</th>
+    </tr>
+    <!-- radio -->
+    <td>
+        <label>
+            <input type="radio" name="Aqua" value="Aqua" id="aqua">
+        Aqua
+        </label>
+    </td>
+    <br>
+    <td>
+        <label>
+            <input type="radio" name="Lime" value="Lime" id="lime">
+        Lime
+        </label>
+    </td>
+    <br>
+    <td>
+        <label>
+            <input type="radio" name="Olive" value="Olive" id="olive">
+        Olive
+        </label>
+    </td>
+    <br>
+    <!-- buttons -->
+    <td>
+        <label>
+            <input type="button" name="80%" value="80%" id="80">
+        80%
+        </label>
+    </td>
+    <br>
+    <td>
+        <label>
+            <input type="button" name="100%" value="100%" id="100">
+        100%
+        </label>
+    </td>
+    <br>
+    <td>
+        <label>
+            <input type="button" name="120%" value="120%" id="120">
+        120%
+        </label>
+    </td>
+    <br>
+    <!--checkbox-->
+    <td>
+        <label>
+            <input type="checkbox" name="Bold" value="Bold" id="bold">
+        Bold
+        </label>
+    </td>
+    <br>
+    <td>
+        <label>
+            <input type="checkbox" name="Italic" value="Italic" id="italic">
+        Italic
+        </label>
+    </td>
+    <br>
+    <td>
+        <label>
+            <input type="checkbox" name="Underline" value="Underline" id="underline">
+        Underline
+        </label>
+    </td>
+    <br>
+</tbody>
+</table>
+    <div id="simple_text">
+        <h2>Istanbul</h2>
+        <p>Istanbul, Turkish İstanbul, formerly Constantinople, ancient Byzantium, largest city and principal seaport of Turkey. It was the capital of both the Byzantine Empire and the Ottoman Empire.</p>
+        <p>The old walled city of Istanbul stands on a triangular peninsula between Europe and Asia. Sometimes as a bridge, sometimes as a barrier, Istanbul for more than 2,500 years has stood between conflicting surges of religion, culture, and imperial power. For most of those years it was one of the most coveted cities in the world.</p>
+    </div>
+    
+
+    </form>
+    <form action="As7_index.html">
+        <button class="back_button" >Return to Assignment 6 Page </button>
+    </form>
+        
+    
+   <footer>
+       This Webpage designed by Cagatay Ersoy 
+   </footer>
+    
+</body>
+
+</html>
+
